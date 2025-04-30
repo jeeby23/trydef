@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-white text-black transition-colors duration-300;
+    font-family: "Dosis", sans-serif;
+}
+strong{
+    font-family: "Merriweather", serif;
+}
+
+.dark body {
+    @apply bg-black text-white;
+}
