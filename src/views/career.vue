@@ -29,8 +29,8 @@
       <div class="">
        <div class="flex flex-col md:flex-row justify-center items-center bg-slate-700 px-8 py-6">
         <div class="text-white " id="black">
-          <h1 class="py-5 font-light text-[2rem] px-6">Our Commitment to Quality.</h1>
-          <p class="md:w-[100%] px-6 mb-10">At DefendNet, quality is the cornerstone of our work. It guides every audit we perform and informs every interaction we have. This unwavering focus on excellence is embedded in our processes, our team, and the way we serve our clients. Our Transparency Report highlights the robust quality control systems we employ, the challenges we face in today’s dynamic environment, and the proactive measures we’re taking to continuously improve and uphold the highest standards..</p>
+          <h1 class="py-5 font-light text-[2rem] md:px-6">Our Commitment to Quality.</h1>
+          <p class="md:w-[100%] md:px-6 mb-10">At DefendNet, quality is the cornerstone of our work. It guides every audit we perform and informs every interaction we have. This unwavering focus on excellence is embedded in our processes, our team, and the way we serve our clients. Our Transparency Report highlights the robust quality control systems we employ, the challenges we face in today’s dynamic environment, and the proactive measures we’re taking to continuously improve and uphold the highest standards..</p>
           <div class="px-6">
           <router-link to="/about"  class="bg-blue-600 hover:bg-blue-700 outline-none px-12 py-4 rounded-full mt-3 text-white text-xl font-medium ">About Us</router-link>
           </div>
@@ -78,7 +78,6 @@
       <MenuItem to="readPolicy" label="Policy Development & Governance Advisory" />
     </div>
       <div class="w-full md:w-1/2">
-    <MenuItem to="readRisk" label="Risk Treatment Planning" />
     <MenuItem to="readSox" label="SOX Compliance Support" />
       <MenuItem to="readSupport" label="IT Support & Operational Readiness" />
       <MenuItem to="readThird" label="Third-Party Risk Assessment Strategy" />
@@ -125,7 +124,7 @@
         <div class="text-white">
           <div class="flex items-center gap-2 text-xl font-bold mb-2 text-white"><img
               :src=" isDark ? hopeDark : hopeDef" alt=""></div>
-          <h1 class="w-[70%]">At DefendNet Technology, we don’t just help you meet compliance standards — we help you
+          <h1 class="md:w-[70%]">At DefendNet Technology, we don’t just help you meet compliance standards — we help you
             build trust with your stakeholders, improve your risk posture, and future-proof your operations.</h1>
           <div class="flex gap-4 mt-4 text-xl">
             <a :href="`tel:${phoneNumber}`"><i class="fa-brands fa-square-whatsapp"></i></a>
@@ -142,7 +141,6 @@
             <li>IT Support & Operational Readiness</li>
             <li> Business Continuity & Incident Management Advisory</li>
             <li>Cybersecurity Advisory</li>
-            <li>Risk Treatment Planning</li>
             <li>Cloud Security Advisory</li>
             <li>SOX Compliance Support</li>
           </ul>
@@ -151,10 +149,11 @@
         <div class="text-white">
           <h1 class="text-lg font-semibold mb-2">Quick Links</h1>
           <div class="flex flex-col space-y-1">
-            <router-link to="/"> Home </router-link>
-            <router-link to="/about"> About</router-link>
-            <router-link to="#"> Services</router-link>
-            <router-link to="/contactus"> Contact Us </router-link>
+            <router-link to="/" class="hover:text-blue-500"> Home </router-link>
+            <router-link to="/about" class="hover:text-blue-500"> About</router-link>
+            <router-link to="#" class="hover:text-blue-500"> Services</router-link>
+            <router-link to="/career" class="hover:text-blue-500"> Career</router-link>
+            <router-link to="/contactus" class="hover:text-blue-500"> Contact Us </router-link>
           </div>
         </div>
         <div class="text-white">
@@ -186,6 +185,7 @@ import qualityDefend from '../assets/images/qualityDefend.jpeg'
 import defendjob from '../assets/images/defendJob.jpeg'
 import leftDefend from '../assets/images/leftDefend.jpeg'
 import ReCeo from '../assets/images/ReCeo.png'
+import hopeDef from '../assets/images/hopeDef.jpg'
 import bgImage from '@/assets/images/circleMap.png'
 import woman from '../assets/images/woman.png'
 import MenuItem from '../components/MenuItem.vue';

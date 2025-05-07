@@ -21,7 +21,7 @@
             vendor ecosystem.
             We help you assess the security posture and compliance status of your third-party vendors. Our structured
             approach evaluates potential vulnerabilities, contract obligations, and data-handling risks to ensure your
-            partners don’t become your weakest link.</p>
+            partners don’t become your weakest link..</p>
           <router-link to="/readThird" class="text-orange-300">Read More <i
               class="fa-solid fa-plus bg-white dark:bg-black text-blue-400"></i></router-link>
         </div>
@@ -69,7 +69,7 @@
           <router-link to="/readCyber" class="text-orange-200">Read More <i
               class="fa-solid fa-plus bg-white dark:bg-black text-blue-400"></i></router-link>
         </div>
-        <div class="flex flex-col items-center text-center p-6 service-card">
+        <!-- <div class="flex flex-col items-center text-center p-6 service-card">
           <img :src="changeRisk" alt="risk management" class="w-40 h-40 rounded-full shadow-md object-cover">
           <h1 class="font-semibold text-[19px]"> ⚖ Risk Treatment Planning</h1>
           <p class="max-w-[100%] text-gray-600 text-[13px] dark:text-white ">Turn risk insights into action.
@@ -78,7 +78,7 @@
             your overall resilience.</p>
           <router-link to="/readRisk" class="text-orange-200">Read More <i
               class="fa-solid fa-plus bg-white dark:bg-black text-blue-400"></i></router-link>
-        </div>
+        </div> -->
         <div class="flex flex-col items-center text-center p-6 service-card ">
           <img :src="sox" alt=" SOX compliance" class="w-40 h-40 rounded-full shadow-md object-cover">
           <h1 class="font-semibold text-[19px]">✅ SOX Compliance Support</h1>
@@ -153,7 +153,7 @@
     </div>
   </SwiperSlide>
 </Swiper>
-    <div class="pl-10 pt-15 text-blue-400 text-[1rem] ">
+    <div class=" pl-3 md:pl-10 pt-15 text-blue-400 text-[1rem] ">
       <h4 class="font-bold py-7">Why Our Values Matter</h4>
       <p class="text-slate-500">In the world of IT auditing and compliance, trust is not optional—it’s essential.
         Organizations rely on us to validate their systems, safeguard their data, and ensure they’re on the right side
@@ -215,7 +215,7 @@
         <div class="text-white">
           <div class="flex items-center gap-2 text-xl font-bold mb-2 text-white"><img
               :src=" isDark ? hopeDark : hopeDef" alt=""></div>
-          <h1 class="w-[70%]">At DefendNet Technology, we don’t just help you meet compliance standards — we help you
+          <h1 class="md:w-[70%]">At DefendNet Technology, we don’t just help you meet compliance standards — we help you
             build trust with your stakeholders, improve your risk posture, and future-proof your operations.</h1>
           <div class="flex gap-4 mt-4 text-xl">
             <a :href="`tel:${phoneNumber}`"><i class="fa-brands fa-square-whatsapp"></i></a>
@@ -232,7 +232,6 @@
             <li>IT Support & Operational Readiness</li>
             <li> Business Continuity & Incident Management Advisory</li>
             <li>Cybersecurity Advisory</li>
-            <li>Risk Treatment Planning</li>
             <li>Cloud Security Advisory</li>
             <li>SOX Compliance Support</li>
           </ul>
@@ -244,6 +243,7 @@
             <router-link to="/" class="hover:text-blue-400"> Home </router-link>
             <router-link to="/about" class="hover:text-blue-400"> About</router-link>
             <router-link to="#" class="hover:text-blue-400"> services</router-link>
+            <router-link to="/career" class="hover:text-blue-500"> Career</router-link>
             <router-link to="/contactus" class="hover:text-blue-400"> Contact Us </router-link>
           </div>
         </div>

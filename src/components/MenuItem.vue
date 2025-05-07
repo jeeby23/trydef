@@ -21,10 +21,3 @@ library.add(faHouse,faGreaterThan);
 defineExpose();  
 </script>
 
-<!-- <RouterLink
-    :to="to"
-    class="flex items-center justify-between border border-black w-full px-4 py-2 hover:bg-blue-400 hover:text-white mb-3"
-  >
-    <span class="text-sm md:text-base font-semibold">{{ label }}</span>
-    <font-awesome-icon :icon="['fas', 'greater-than']" />
-  </RouterLink> -->

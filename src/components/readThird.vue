@@ -4,10 +4,6 @@
       <h1
         class="absolute inset-0 flex  items-center justify-center text-center px-4 text-blue-400 font-bold text-[2rem] z-10 bg-transparent">
         Third-Party Risk Assessment Strategy</h1>
-      <!-- <video autoplay loop muted class="absolute top-0 left-0 w-full h-full object-cover z-0">
-        <source src="../assets/videos/thirdVideo.mp4 " type="video/webm" />
-        <source src="../assets/videos/thirdVideo.mp4 " type="video/mp4" />
-    </video> -->
       <div class="absolute top-0 left-0 w-full h-full object-cover z-0">
         <img :src="EditPlan" alt="">
       </div>
@@ -21,7 +17,10 @@
           <p class=" text-base md:text-lg mb-4 dark:text-white"> At DefendNet, our Third-Party Risk Assessment Strategy
             is built to safeguard your organization from vulnerabilities introduced by external vendors, partners, or
             service providers. We help you identify, evaluate, and manage risks across your supply chain—ensuring that
-            third-party relationships don’t become weak links in your cybersecurity or compliance posture.</p>
+            third-party relationships don’t become weak links in your cybersecurity or compliance posture. At DefendNet, we understand that identifying risks is
+            only the beginning. The real value lies in how you respond. Our Risk Treatment Planning services are
+            designed to help organizations develop and implement effective strategies to reduce, mitigate, or transfer
+            risk — all tailored to your specific business needs and risk appetite.</p>
           <h2 class="font-semibold mb-2">What We Do:</h2>
           <ul class="text-left space-y-2 list-disc list-inside">
             <li class="w-[80%]">Vendor Risk Profiling – Classify vendors based on security and compliance exposure.
@@ -31,6 +30,8 @@
             <li class="w-[80%]">Contract Review – Align agreements with security expectations and accountability. </li>
             <br>
             <li class="mx-w-[100%]">Continuous Monitoring – Track changes in vendor risk with real-time alerts.</li>
+            <br>
+            <li>Risk Prioritization & Scoring Focus on what matters most with a clear hierarchy of risk impact and likelihood.</li>
           </ul>
         </div>
       </div>
@@ -57,7 +58,7 @@
         <div class="text-white">
           <div class="flex items-center gap-2 text-xl font-bold mb-2 text-white"><img
               :src=" isDark ? hopeDark : hopeDef" alt=""></div>
-          <h1 class="w-[70%]">At DefendNet Technology, we don’t just help you meet compliance standards — we help you
+          <h1 class="md:w-[70%]">At DefendNet Technology, we don’t just help you meet compliance standards — we help you
             build trust with your stakeholders, improve your risk posture, and future-proof your operations.</h1>
           <div class="flex gap-4 mt-4 text-xl">
             <a :href="`tel:${phoneNumber}`"><i class="fa-brands fa-square-whatsapp"></i></a>
@@ -74,7 +75,6 @@
             <li>IT Support & Operational Readiness</li>
             <li> Business Continuity & Incident Management Advisory</li>
             <li>Cybersecurity Advisory</li>
-            <li>Risk Treatment Planning</li>
             <li>Cloud Security Advisory</li>
             <li>SOX Compliance Support</li>
           </ul>
@@ -85,6 +85,7 @@
             <router-link to="/" class="hover:text-blue-500"> Home </router-link>
             <router-link to="/about" class="hover:text-blue-500"> About</router-link>
             <router-link to="#" class="hover:text-blue-500"> Services</router-link>
+            <router-link to="/career" class="hover:text-blue-500"> Career</router-link>
             <router-link to="/contactus" class="hover:text-blue-500"> Contact Us </router-link>
           </div>
         </div>

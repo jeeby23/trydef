@@ -55,7 +55,7 @@
         <div class="text-white">
           <div class="flex items-center gap-2 text-xl font-bold mb-2 text-white"><img
               :src=" isDark ? hopeDark : hopeDef" alt=""></div>
-          <h1 class="w-[70%]">At DefendNet Technology, we don’t just help you meet compliance standards — we help you
+          <h1 class="md:w-[70%]">At DefendNet Technology, we don’t just help you meet compliance standards — we help you
             build trust with your stakeholders, improve your risk posture, and future-proof your operations.</h1>
           <div class="flex gap-4 mt-4 text-xl">
             <a :href="`tel:${phoneNumber}`"><i class="fa-brands fa-square-whatsapp"></i></a>
@@ -72,7 +72,6 @@
             <li>IT Support & Operational Readiness</li>
             <li> Business Continuity & Incident Management Advisory</li>
             <li>Cybersecurity Advisory</li>
-            <li>Risk Treatment Planning</li>
             <li>Cloud Security Advisory</li>
             <li>SOX Compliance Support</li>
           </ul>
@@ -81,10 +80,11 @@
         <div class="text-white">
           <h1 class="text-lg font-semibold mb-2">Quick Links</h1>
           <div class="flex flex-col space-y-1">
-            <router-link to="#"> Home </router-link>
-            <router-link to="/about"> About</router-link>
-            <router-link to="/services"> services</router-link>
-            <router-link to="/contactus"> Contact Us </router-link>
+            <router-link to="/" class="hover:text-blue-500"> Home </router-link>
+            <router-link to="/about" class="hover:text-blue-500"> About</router-link>
+            <router-link to="#" class="hover:text-blue-500"> Services</router-link>
+            <router-link to="/career" class="hover:text-blue-500"> Career</router-link>
+            <router-link to="/contactus" class="hover:text-blue-500"> Contact Us </router-link>
           </div>
         </div>
         <div class="text-white">

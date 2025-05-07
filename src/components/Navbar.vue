@@ -19,16 +19,16 @@
       <router-link to="/about"
         class="text-slate-500 dark:text-white py-5 dark:hover:text-gray-300 hover:text-slate-700 text-xl font-medium"   @click="closeServices">
         About</router-link>
-      <div class="relative" @click="toggleServicesMobile">
+      <div class="relative" @click="showServicesMobile = !showServicesMobile">
         <!-- Mobile + Desktop Trigger -->
         <div
           class="flex justify-between items-center cursor-pointer text-slate-500 dark:text-white py-5 dark:hover:text-gray-300 hover:text-slate-700 text-xl font-medium"
-          @click="showServicesMobile = !showServicesMobile" >
+          >
           <span class="flex items-center gap-1">
             <i class=""></i>
             Services
           </span>
-          <i :class="['fa-solid', showServicesMobile ? 'fa-minus' : 'fa-plus', 'ml-2', 'block', 'md:hidden']"></i>
+          <i :class="['fa-solid', showServicesMobile ? 'fa-minus' : 'fa-plus', 'ml-2', 'block', 'md:hidden'] "></i>
           <i class="fa-solid fa-chevron-down text-[1rem] ml-2 hidden md:block"></i>
         </div>
       <!-- swipper vue -->
@@ -53,9 +53,6 @@
                 Policy Development & Governance Advisory</router-link><br>
             </div>
             <div class="py-3 w-full md:w-1/2">
-              <router-link to="/readRisk"
-                class="text-sm font-medium text-slate-600 hover:text-blue-600 dark:text-white hover:dark:text-blue-600"   @click="closeServices">
-                Risk Treatment Planning</router-link><br>
               <router-link to="/readSox"
                 class="text-sm font-medium text-slate-600 hover:text-blue-600 dark:text-white hover:dark:text-blue-600"   @click="closeServices">
                 SOX Compliance Support</router-link><br>
@@ -77,7 +74,7 @@
         class="text-slate-500 dark:text-white py-5 dark:hover:text-gray-300 hover:text-slate-700 text-xl font-medium "   @click="closeServices">
         Contact Us </router-link>
     </nav>
-    <div class="text-4xl text-black dark:text-white cursor-pointer md:hidden z-20 "  @click="meauOpen">
+    <div class="text-4xl text-black dark:text-white cursor-pointer md:hidden z-50 "  @click="meauOpen">
       <i :class="[open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars' ]"></i>
     </div>
 
@@ -87,7 +84,7 @@
 
 <script setup>
 import {RouterLink,useRouter, useRoute} from 'vue-router'
-import {ref,onMounted,onBeforeUnmount } from 'vue'
+import {ref,onMounted,onBeforeUnmount} from 'vue'
 import hopeDef from '../assets/images/hopeDef.jpg'
 import hopeDark from '../assets/images/hopeDark.jpg'
 
@@ -113,28 +110,34 @@ const closeServices = () => {
 const router = useRouter()
 const route = useRoute()
 
-// function goToServices() {
-//   if (route.path === '/') {
-//     // Already on home page, just scroll
-//     document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
-//   } else {
-//     // Go to home, then scroll after navigation
-//     router.push({ path: '/', hash: '#services' })
-//   }
-// }
+// watch(() => route.fullPath, () => {
+//   open.value = false
+//   showServicesMobile.value = false
+//   showDropdown.value = false
+// })
 function goToServices() {
   if (route.path === '/') {
-    nextTick(() => {
-      document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-    });
+    // Already on home page, just scroll
+    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
   } else {
-    router.push('/').then(() => {
-      nextTick(() => {
-        document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
+    // Go to home, then scroll after navigation
+    router.push({ path: '/', hash: '#services' })
   }
 }
+
+// function goToServices() {
+//   if (route.path === '/') {
+//     nextTick(() => {
+//       document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+//     });
+//   } else {
+//     router.push('/').then(() => {
+//       nextTick(() => {
+//         document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+//       });
+//     });
+//   }
+// }
 
 const isDark = ref(false)
 const sunIcon = new URL('@/assets/images/sun.png', import.meta.url).href // ☀️ Your light-mode icon
