@@ -12,6 +12,8 @@ import readCyber from '../components/readCyber.vue'
 import readRisk from '../components/readRisk.vue'
 import readSox from '../components/readSox.vue'
 import readPolicy from '../components/readPolicy.vue'
+import career from '../views/career.vue'
+import careerWith from '../views/careerWith.vue'
 
 
 const routes = [
@@ -82,6 +84,16 @@ const routes = [
    path: '/readPolicy',
   name: 'readPolicy',
   component: readPolicy
+  },
+  {
+   path: '/career',
+  name: 'career',
+  component: career
+  },
+  {
+   path: '/careerWith',
+  name: 'careerWith',
+  component: careerWith
   }
 ]
 

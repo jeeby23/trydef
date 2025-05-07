@@ -112,7 +112,7 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="mb-9">
       <h3 class="font-bold text-[2rem] text-center my-10 capitalize">Our Values at <span
           class="text-blue-500 font-mono font-extrabold"> DefendNet </span></h3>
       <p class="max-w-xl mx-auto text-gray-600 text-center dark:text-white ">At <span
@@ -124,9 +124,37 @@
 
     </div>
     <!-- swiper  -->
+    <!-- In your template section -->
+<Swiper
+  class="w-full h-screen"
+  :modules="[Autoplay]"
+  :slides-per-view="1"
+  :space-between="0"
+  :loop="true"
+  :autoplay="{
+    delay: 3000,
+    disableOnInteraction: false,
+    // pauseOnMouseEnter: true
+  }"
+>
+  <SwiperSlide v-for="(slide, index) in slides" :key="index" class="relative">
+    <img :src="slide.img" alt="" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-30 p-4">
+      <div class="text-center max-w-2xl">
+        <h1 class="text-4xl font-bold mb-4 drop-shadow-lg">
+         {{slide.description}}
+        </h1>
+     
+        <p class="text-xl font-semibold drop-shadow-lg">
+          {{ slide.text }}
+        </p>
 
+      </div>
+    </div>
+  </SwiperSlide>
+</Swiper>
     <!-- swiper -->
-    <div class="w-full overflow-hidden py-8">
+    <!-- <div class="w-full overflow-hidden py-8">
       <div class="relative w-full flex justify-center">
         <div ref="slider" class="flex transition-transform duration-700 ease-in-out"
           :style="{ transform: `translateX(${sliderOffset}px)` }">
@@ -143,8 +171,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="pl-10 pt-15 text-blue-400 text-[1rem]">
+    </div> -->
+    <div class="pl-10 pt-15 text-blue-400 text-[1rem] ">
       <h4 class="font-bold py-7">Why Our Values Matter</h4>
       <p class="text-slate-500">In the world of IT auditing and compliance, trust is not optional—it’s essential.
         Organizations rely on us to validate their systems, safeguard their data, and ensure they’re on the right side
@@ -293,11 +321,18 @@ import cardAus from '../assets/images/cardAus.jpg'
 import cardEffect from '../assets/images/cardEffect.jpg'
 import cardInt from '../assets/images/cardInt.jpg'
 import woman from '../assets/images/woman.png'
+import  deEfi from'../assets/images/deEfi.jpg'
 import bgImage from '@/assets/images/circleMap.png'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-
 gsap.registerPlugin(ScrollTrigger)
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/autoplay'
+
+
+
 
 const heading = ref(null)
 
@@ -344,13 +379,29 @@ onMounted(() => {
   })
 })
 // Clone cards for seamless looping
-
-const cards = ref([
-  {img: cardAus, title: '🔒 Assurance ', description: ' we provide more than just audit reports. We deliver confidenceOur  assurance comes from deep technical understanding, robust risk management processes, and the ability to interpret and apply complex compliance frameworks (such as ISO 27001, NIST, SOC 2, HIPAA, and more'},
-  { img:cardEffect,title: ' ⚙ Effectiveness', description: 'Effectiveness in IT auditing is about delivering real value—not just reports. We believe that every recommendation should improve your posture, not complicate it. That’s why our approach is methodical, measurable, and sharply aligned with your business goals.' },
-  { img:cardInt, title: '🧭 Integrity ', description: 'We hold ourselves—and our clients—to the highest ethical standards. At DefendNet, Integrity means conducting audits with transparency, honesty, and a firm commitment to independence. We do not cut corners, inflate risks, or deliver biased assessments.' },
+const slides = [
+  {
+    img: cardAus,
+    description: "Assurance",
+    text: " we provide more than just audit reports. We deliver confidenceOur  assurance comes from deep technical understanding, robust risk management processes, and the ability to interpret and apply complex compliance frameworks (such as ISO 27001, NIST, SOC 2, HIPAA, and more"
+  },
+  {
+    img: deEfi,
+       description: "Effectivness",
+    text: "Effectiveness in IT auditing is about delivering real value—not just reports. We believe that every recommendation should improve your posture, not complicate it. That’s why our approach is methodical, measurable, and sharply aligned with your business goals",
+  },
+  {
+    img: cardInt,
+       description: "Integrity",
+    text: "We hold ourselves—and our clients—to the highest ethical standards. At DefendNet, Integrity means conducting audits with transparency, honesty, and a firm commitment to independence. We do not cut corners, inflate risks, or deliver biased assessments.",
+  }
+]
+// const cards = ref([
+//   {img: cardAus, title: '🔒 Assurance ', description: ' we provide more than just audit reports. We deliver confidenceOur  assurance comes from deep technical understanding, robust risk management processes, and the ability to interpret and apply complex compliance frameworks (such as ISO 27001, NIST, SOC 2, HIPAA, and more'},
+//   { img:cardEffect,title: ' ⚙ Effectiveness', description: 'Effectiveness in IT auditing is about delivering real value—not just reports. We believe that every recommendation should improve your posture, not complicate it. That’s why our approach is methodical, measurable, and sharply aligned with your business goals.' },
+//   { img:cardInt, title: '🧭 Integrity ', description: 'We hold ourselves—and our clients—to the highest ethical standards. At DefendNet, Integrity means conducting audits with transparency, honesty, and a firm commitment to independence. We do not cut corners, inflate risks, or deliver biased assessments.' },
  
-])
+// ])
 
 const currentIndex = ref(0)
 const slider = ref(null)

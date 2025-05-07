@@ -4,7 +4,7 @@
        <transition appear
   @before-enter="beforeEnter"
   @enter="enter">
-      <h1 class="text-2xl md:text-[2rem] leading-tight w-[100%] text-slate-700  my-1 font-bold dark:text-white" >Empower Your mind. Elevate your income With<br> <strong class="text-blue-700 text-5xl lg:text-4xl font-bold "> D<span class="text-blue-900">efend</span>Net</strong></h1>
+      <h1 class="text-2xl md:text-[2rem] leading-tight w-[100%] text-slate-700  my-1 font-bold dark:text-white" > <strong class="text-blue-700 text-5xl lg:text-4xl font-bold "> D<span class="text-blue-900">efend</span>Net</strong></h1>
       </transition>
       <p class="text-2xl md:text-xl lg:w-[80%] text-slate-700 my-1 dark:text-white ">A trusted partner in IT compliance and auditing—helping organizations meet regulatory standards, enhance cybersecurity, and stay audit-ready through expert-led solutions.</p>
       <router-link :to="visit" class="bg-blue-600 hover:bg-blue-700 outline-none px-12 py-4 rounded-full mt-3 text-white text-xl font-medium "> Get Started</router-link>

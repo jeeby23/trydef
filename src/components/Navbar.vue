@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-      <!-- <a @click.prevent="goToServices" class="text-slate-500 dark:text-white py-5 dark:hover:text-gray-300 hover:text-slate-700 text-xl font-medium cursor-pointer">Services</a> -->
+      <router-link to="career"  class="text-slate-500 dark:text-white py-5 dark:hover:text-gray-300 hover:text-slate-700 text-xl font-medium "   @click="closeServices">Career</router-link>
       <router-link to="/contactus"
         class="text-slate-500 dark:text-white py-5 dark:hover:text-gray-300 hover:text-slate-700 text-xl font-medium "   @click="closeServices">
         Contact Us </router-link>
