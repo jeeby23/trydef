@@ -1,17 +1,5 @@
 <template>
   <div>
-    <!-- Breadcrumb section -->
-    <!-- <div class="h-[30px] py-4">
-      <font-awesome-icon :icon="['fas', 'house']" class="px-1" />
-      <font-awesome-icon :icon="['fas', 'greater-than']" class="px-1" />
-      <router-link to="/careerWith" class="underline px-3">
-        Career With DefenNet
-        <font-awesome-icon :icon="['fas', 'greater-than']" class="px-1" />
-      </router-link>
-      <router-link to="/readAudit" class="px-1">Audit</router-link>
-    </div> -->
-
-    <!-- Background color section -->
     <div class="h-[30vh] md:h-[49vh] bg-blue-400 px-4 md:px-0 ">
       <!-- On small screens, image goes full width and outside of blue background -->
       <div class="relative">
@@ -33,14 +21,12 @@
     </div>
     <div class=" mx-0 md:mx-[100px] ">
       <div class="relative mb-7 md:mb-7">
-      <!-- <div class="absolute top-[100px] md:top-[-40px] bg-white p-7" > -->
-        <div class="relative bg-white p-7 mt-6 md:mt-[-40px]">
+        <div class="relative bg-white p-7 mt-6 md:mt-[-40px] dark:bg-black">
         <h1 class="font-bold text-[1.3rem] md:text-[2rem] pb-4">Discover What Drives Business with DefendNet</h1>
         <p class="text-[1.3rem]">At DefendNet, auditing opens the door to some of the UK’s most exciting and influential organisations. To deliver real value, we delve into how companies operate — how they earn revenue, control expenditure, and plan for the future. This means our team builds a strong foundation across diverse industries and business models. The unique insight and broad exposure you gain at DefendNet help you grow your capabilities and explore what you’re truly capable of achieving.</p>
       </div>
       </div>
       <div class="">
-      <!-- <div class="flex flex-col md:flex-row justify-center items-center  bg-black px-8 py-6  min-h-screen md:min-h-[50vh] "> -->
        <div class="flex flex-col md:flex-row justify-center items-center bg-slate-700 px-8 py-6">
         <div class="text-white " id="black">
           <h1 class="py-5 font-light text-[2rem] px-6">Our Commitment to Quality.</h1>
@@ -53,7 +39,7 @@
       </div>
       </div>
       <div class="flex flex-col md:flex-row">
-      <div class="px-6 py-10 bg-white w-[] md:mt-[100px]">
+      <div class="px-6 py-10 bg-white w-[] md:mt-[100px] dark:bg-black">
           <div class="bg-blue-400 h-[6px] md:h-2 my-4  px-6 " style="width: 48px;"></div>
   <h1 class="font-light text-[2rem] ">Building Trust Through Transparent Auditing.</h1>
   <p class="text-[1.3rem]">At DefendNet, our Audit team plays a vital role in verifying the integrity of the UK’s leading organisations. We examine financial reports, regulatory disclosures, and sustainability practices to ensure they are accurate, fair, and transparent. Boards of directors, investors, stakeholders, and the wider market depend on our insights to make informed decisions..</p><br>
@@ -63,7 +49,7 @@
 </div>
 <div class="flex flex-col-reverse md:flex-row justify-center items-center">
   <div><img :src="leftDefend" alt="" class="w-[450px] mt-5 md:-mt-0 translate-y-[-2px]"></div>
-  <div class="w-[80%] px-0 md:px-9 mt-9">
+  <div class="md:w-[80%] px-5 md:px-9 mt-9">
      <div class="bg-blue-400 h-[6px] md:h-2 my-4" style="width: 48px;"></div>
    <h1 class="font-light text-[2rem] ">Driven by Expertise, Enhanced by Technology.</h1>
 <p class="text-[1.3rem]">At DefendNet, we harness cutting-edge technology to elevate every aspect of our audit services. As innovation reshapes the industry, we remain at the forefront—leveraging smart solutions to deliver deeper insights and greater value to our clients. Since 2018, we’ve integrated advanced tools like drones into our inventory audits, improving accuracy, efficiency, and assurance every step of the way.</p>
@@ -80,47 +66,27 @@
 </div>
 </div>
 <div >
-  <div class=" mt-9 px-5">
+  <div class=" mt-9 px-5 md:px-0">
     <h1 class=" text-[2rem] pb-3">Still Curious ?</h1>
     <p class="font-bold font-sans text-[1.5rem] text-slate-400 pb-2">Check out our other services</p>
   </div>
-  <div class="flex flex-col md:flex-row px-8 md:-px-0 ">
-    <div class="">
-      <div class="my-3 mr-3">
-      <router-link to="readAudit" class=" border border-black w-64 pr-[320px] py-1  hover:bg-blue-400 hover:text-white px-2 "> IT Auditing<font-awesome-icon :icon="['fas', 'greater-than']" class="translate-x-[300px]"/></router-link>
-      </div>
-      <div class="my-3 mr-3">
-      <router-link to=" readCloud" class=" border border-black w-64 pr-[240px] py-1  hover:bg-blue-400 hover:text-white px-2"> Cloud Security Advisory <font-awesome-icon :icon="['fas', 'greater-than']" class="translate-x-[220px]"/></router-link>
-      </div>
-      <div class="my-3 mr-3">
-      <router-link to="readCyber" class=" border border-black w-64 pr-[245px] py-1  hover:bg-blue-400 hover:text-white px-2"> Cybersecurity  Advisory <font-awesome-icon :icon="['fas', 'greater-than']" class="translate-x-[225px]"/></router-link>
-      </div>
-      <div class="my-3 mr-3">
-      <router-link to="readPolicy" class=" border border-black w-64 pr-[135px] py-1  hover:bg-blue-400 hover:text-white px-2 "> Policy Development &Governace Advisory<font-awesome-icon :icon="['fas', 'greater-than']" class="translate-x-[115px]"/></router-link>
-      </div>
-      <div class="my-3 mr-3">
-       <router-link to="readRisk" class=" border border-black w-64 pr-[240px] py-1  hover:bg-blue-400 hover:text-white px-2"> Risk Treatment planning<font-awesome-icon :icon="['fas', 'greater-than']" class="translate-x-[220px]"/></router-link> 
-       </div>
+  <div class="flex flex-col md:flex-row px-8 md:px-0 gap-4">
+     <div class="w-full md:w-1/2">
+      <MenuItem to="readAudit" label="IT Auditing" />
+      <MenuItem to="readCloud" label="Cloud Security Advisory" />
+      <MenuItem to="readCyber" label="Cybersecurity Advisory" />
+      <MenuItem to="readPolicy" label="Policy Development & Governance Advisory" />
     </div>
-    <div class=" ">
-      <div class="my-3">
-        <router-link to="readSox" class=" border border-black w-64 pr-[240px] md:pr-[220px] py-1  hover:bg-blue-400 hover:text-white px-2"> SOX Compliance support<font-awesome-icon :icon="['fas', 'greater-than']" class=" translate-x-[220px] md:translate-x-[200px]"/></router-link> 
-        </div>
-        <div class="my-3">
-        <router-link to="readSupport" class=" border border-black w-64 pr-[187px] md:pr-[167px] py-1  hover:bg-blue-400 hover:text-white px-2"> IT Support & Operational rediness<font-awesome-icon :icon="['fas', 'greater-than']" class=" translate-x-[165px] md:translate-x-[150px]"/></router-link> 
-        </div>
-        <div class="my-3">
-        <router-link to="readThird" class=" border border-black w-64 pr-[170px] md:pr-[150px] py-1  hover:bg-blue-400 hover:text-white px-2 "> Third-party risk assesment strategy <font-awesome-icon :icon="['fas', 'greater-than']" class=" translate-x-[150px] md:translate-x-[135px]"/></router-link> 
-        </div>
-        <div class="my-3">
-        <router-link to="readMore" class=" border border-black w-64 pr-[65px] md:pr-[45px] py-1 hover:bg-blue-400 hover:text-white px-2 "> Business continutiy & incident management Advisory <font-awesome-icon :icon="['fas', 'greater-than']" class=" translate-x-[43px] md:translate-x-[30px] font-light"/></router-link> 
-        </div>
+      <div class="w-full md:w-1/2">
+    <MenuItem to="readRisk" label="Risk Treatment Planning" />
+    <MenuItem to="readSox" label="SOX Compliance Support" />
+      <MenuItem to="readSupport" label="IT Support & Operational Readiness" />
+      <MenuItem to="readThird" label="Third-Party Risk Assessment Strategy" />
+      <MenuItem to="readMore" label="Business Continuity & Incident Management Advisory" />
     </div>
-  </div>
+    </div> 
 </div>
-
     </div>
-    
   </div>
   <div class="flex flex-col-reverse md:flex-row items-center justify-center gap-6 px-6 pt-[100px]" id="stop"
       ref="beforeFoot">
@@ -222,10 +188,11 @@ import leftDefend from '../assets/images/leftDefend.jpeg'
 import ReCeo from '../assets/images/ReCeo.png'
 import bgImage from '@/assets/images/circleMap.png'
 import woman from '../assets/images/woman.png'
-import hopeDef from '../assets/images/hopeDef.jpg'
+import MenuItem from '../components/MenuItem.vue';
+// import MenuItem from './MenuItem.vue';
 import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import { ref, onMounted } from 'vue'
+import ScrollTrigger from 'gsap/ScrollTrigger' 
+import { ref, onMounted, nextTick} from 'vue'
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -233,24 +200,22 @@ const phoneNumber =' +4407349146384';
  const email = 'DefendNettechnology.com';
  const twitt = 'https://x.com/DefendNetTech'
  const link = 'https://www.linkedin.com/company/107200419/admin/dashboard/'
-const cardRefs = ref([])
 
 
 const backgroundStyle = {
   backgroundImage: `url(${bgImage})`,
 }
-
 const footerSection = ref(null)
 
 onMounted(() => {
   gsap.fromTo(
-    footerSection.value,
-    { opacity: 0, x: '-100%' },
-    {
-      opacity: 1,
-      x: '0%',
-      duration: 2,
-      ease: 'power3.out',
+    footerSection.value, 
+    { opacity: 0, x: '-100%' }, 
+    { 
+      opacity: 1, 
+      x: '0%', 
+      duration: 2, 
+      ease: 'power3.out', 
       scrollTrigger: {
         trigger: footerSection.value,
         start: 'top 80%',
@@ -264,13 +229,13 @@ const beforeFoot = ref(null)
 
 onMounted(() => {
   gsap.fromTo(
-    beforeFoot.value,
-    { opacity: 0, x: '-100%' },
-    {
-      opacity: 1,
-      x: '0%',
-      duration: 2,
-      ease: 'power3.out',
+    beforeFoot.value, 
+    { opacity: 0, x: '-100%' }, 
+    { 
+      opacity: 1, 
+      x: '0%', 
+      duration: 2, 
+      ease: 'power3.out', 
       scrollTrigger: {
         trigger: beforeFoot.value,
         start: 'top 80%',
@@ -280,6 +245,7 @@ onMounted(() => {
     }
   )
 })
+
 
 </script>
 

@@ -153,25 +153,6 @@
     </div>
   </SwiperSlide>
 </Swiper>
-    <!-- swiper -->
-    <!-- <div class="w-full overflow-hidden py-8">
-      <div class="relative w-full flex justify-center">
-        <div ref="slider" class="flex transition-transform duration-700 ease-in-out"
-          :style="{ transform: `translateX(${sliderOffset}px)` }">
-          <div v-for="(card, index) in cards" :key="index" @click="goToCard(index)" :class="[
-            'min-w-[70%] sm:min-w-[70%] md:min-w-[50%] lg:min-w-[400px] max-w-[95%] mx-4',
-            'rounded-xl p-6 text-center cursor-pointer transition-all duration-700 transform-gpu',
-            index === currentIndex
-              ? 'bg-white dark:text-black shadow-xl opacity-100 translate-y-0 scale-105 z-10'
-              : 'bg-gray-100 opacity-40 translate-y-4 scale-95 z-0'
-          ]">
-            <img :src="card.img" alt="card" class="mx-auto mb-4" />
-            <h2 class="text-xl font-bold mb-2">{{ card.title }}</h2>
-            <p class="text-gray-600">{{ card.description }}</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="pl-10 pt-15 text-blue-400 text-[1rem] ">
       <h4 class="font-bold py-7">Why Our Values Matter</h4>
       <p class="text-slate-500">In the world of IT auditing and compliance, trust is not optional—it’s essential.
@@ -185,17 +166,6 @@
         class="w-[400px] h-[230px] bg-slate-100 dark:bg-gray-800 shadow-md rounded-2xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 cursor-pointer px-10 text-sm py-5"
         :class="hovered === index ? 'scale-[100%] shadow-xl z-10' : 'scale-[80%]'">
         <h2 class="text-xl font-bold text-black dark:text-white">{{ card.title }}</h2>
-        <!-- <div v-if="card.title === 'Leadership team'" class="font-mono">
-          <p class="font-semibold mb-1">Expert IT Auditor</p>
-          <ul class="list-disc list-inside mb-2">
-            <li>Olasubomi F Kehinde</li>
-          </ul>
-          <p class="font-semibold mb-1">Senior Project Manager :</p>
-          <ul class="list-disc list-inside">
-            <li>Nasirat Omotayo</li> 
-          </ul>
-        </div>
-        <p v-else> {{ card.description }}</p> -->
         <div v-if="card.title === 'Industry'" class="">
           <p class="font-semibold "></p>
           <ul class=" mb-2">
@@ -210,15 +180,10 @@
 
         </div>
         <p v-else> {{ card.description }} </p>
-        <!-- <p class="mt-4 text-gray-600 dark:text-gray-300">{{ card.description }}</p> -->
       </div>
     </div>
     <div class="flex flex-col-reverse md:flex-row items-center justify-center gap-6 px-6 pt-[100px]" id="stop"
       ref="beforeFoot">
-      <!-- <div
-      class="flex flex-col items-center justify-center gap-6 px-4 py-8 md:flex-row md:justify-between lg:px-16 lg:py-12"
-      id="stop"> -->
-      <!-- Left Text Block -->
       <div class="text-center w-full md:w-1/3">
         <h1 class="font-mono font-extrabold text-lg sm:text-xl md:text-2xl">
           Let’s secure your business together
@@ -396,12 +361,7 @@ const slides = [
     text: "We hold ourselves—and our clients—to the highest ethical standards. At DefendNet, Integrity means conducting audits with transparency, honesty, and a firm commitment to independence. We do not cut corners, inflate risks, or deliver biased assessments.",
   }
 ]
-// const cards = ref([
-//   {img: cardAus, title: '🔒 Assurance ', description: ' we provide more than just audit reports. We deliver confidenceOur  assurance comes from deep technical understanding, robust risk management processes, and the ability to interpret and apply complex compliance frameworks (such as ISO 27001, NIST, SOC 2, HIPAA, and more'},
-//   { img:cardEffect,title: ' ⚙ Effectiveness', description: 'Effectiveness in IT auditing is about delivering real value—not just reports. We believe that every recommendation should improve your posture, not complicate it. That’s why our approach is methodical, measurable, and sharply aligned with your business goals.' },
-//   { img:cardInt, title: '🧭 Integrity ', description: 'We hold ourselves—and our clients—to the highest ethical standards. At DefendNet, Integrity means conducting audits with transparency, honesty, and a firm commitment to independence. We do not cut corners, inflate risks, or deliver biased assessments.' },
- 
-// ])
+
 
 const currentIndex = ref(0)
 const slider = ref(null)
@@ -512,28 +472,7 @@ onMounted(() => {
     }
   )
 })
-onMounted(() => {
-  updateSliderOffset()
 
-  const observer = new ResizeObserver(updateSliderOffset)
-  observer.observe(slider.value.parentElement)
-
-  intervalId = setInterval(() => {
-    nextCard()
-  }, 4000)
-
-  window.addEventListener('resize', updateSliderOffset)
-
-})
-
-onBeforeUnmount(() => {
-  clearInterval(intervalId)
-  window.removeEventListener('resize', updateSliderOffset)
-})
-
-watch(currentIndex, () => {
-  updateSliderOffset()
-})
 // onBeforeUnmount(() => {
 //   clearInterval(interval)
 // })

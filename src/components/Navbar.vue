@@ -11,9 +11,8 @@
     <div class="absolute right-[60px] top-[28px] md:right-2 lg:right-16 cursor-pointer z-30" @click="toggleDarkMode">
       <img :src="isDark ? moonIcon : sunIcon" alt="Theme Toggle" class="w-5 h-5 sm:w-6 sm:h-6">
     </div>
-    <nav class="fixed top-0 left-0 w-full bg-white dark:bg-black z-60 flex flex-col p-5 gap-4 transition-all duration-500
-         md:static md:flex-row md:w-auto md:shadow-none md:h-[80px] md:items-center"
-      :class="[open ? 'top-0' : 'top-[-1000%]']">
+   <nav class="fixed top-0 left-0 w-full bg-white dark:bg-black z-50 flex flex-col p-5 gap-4 transition-all duration-500 ease-in-out md:static md:flex-row md:w-auto md:shadow-none md:h-[80px] md:items-center"
+  :class="[open ? 'translate-y-0' : '-translate-y-full md:translate-y-0']">
       <router-link to="/"
         class="text-slate-500 dark:text-white py-5 dark:hover:text-gray-300 hover:text-slate-700 text-xl font-medium"   @click="closeServices">
         Home </router-link>
@@ -114,15 +113,29 @@ const closeServices = () => {
 const router = useRouter()
 const route = useRoute()
 
+// function goToServices() {
+//   if (route.path === '/') {
+//     // Already on home page, just scroll
+//     document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+//   } else {
+//     // Go to home, then scroll after navigation
+//     router.push({ path: '/', hash: '#services' })
+//   }
+// }
 function goToServices() {
   if (route.path === '/') {
-    // Already on home page, just scroll
-    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+    nextTick(() => {
+      document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+    });
   } else {
-    // Go to home, then scroll after navigation
-    router.push({ path: '/', hash: '#services' })
+    router.push('/').then(() => {
+      nextTick(() => {
+        document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
   }
 }
+
 const isDark = ref(false)
 const sunIcon = new URL('@/assets/images/sun.png', import.meta.url).href // ☀️ Your light-mode icon
 const moonIcon = new URL('@/assets/images/moon.png', import.meta.url).href // 🌙 Your dark-mode icon

@@ -13,7 +13,7 @@ import readRisk from '../components/readRisk.vue'
 import readSox from '../components/readSox.vue'
 import readPolicy from '../components/readPolicy.vue'
 import career from '../views/career.vue'
-import careerWith from '../views/careerWith.vue'
+import MenuItem from '../components/MenuItem.vue'
 
 
 const routes = [
@@ -91,9 +91,9 @@ const routes = [
   component: career
   },
   {
-   path: '/careerWith',
-  name: 'careerWith',
-  component: careerWith
+   path: '/MenuItem',
+  name: '/MenuItem',
+  component: MenuItem
   }
 ]
 
