@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-5 lg:px-20 h-[100vh] md:h-[80vh] flex flex-col-reverse md:flex-row justify-center md:justify-between items-center gap-10">
+  <div class="container mx-auto px-5 lg:px-7 h-[100vh] md:h-[80vh] flex flex-col-reverse md:flex-row justify-center md:justify-between items-center gap-10">
     <div class="w-full flex items-center flex-col md:items-start ">
        <transition appear
   @before-enter="beforeEnter"
@@ -9,6 +9,7 @@
       <p class="text-2xl md:text-xl lg:w-[80%] text-slate-700 my-1 dark:text-white ">A trusted partner in IT compliance and auditing—helping organizations meet regulatory standards, enhance cybersecurity, and stay audit-ready through expert-led solutions.</p>
       <router-link :to="visit" class="bg-blue-600 hover:bg-blue-700 outline-none px-12 py-4 rounded-full mt-3 text-white text-xl font-medium "> Get Started</router-link>
     </div>
+    
     <div class="image">
       <img :src="imgsrc" alt="home"  />
     </div>

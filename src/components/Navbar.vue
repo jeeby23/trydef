@@ -1,8 +1,5 @@
 <template>
-  <header :class="[
-    'top-0 z-50 w-full flex justify-between items-center bg-white shadow-md h-[80px] px-5 dark:bg-black lg:px-24 transition-all duration-300',
-    isSticky ? 'fixed shadow-lg' : 'relative'
-  ]" ref="headerRef">
+  <header class="fixed top-0 z-50 w-full flex justify-between items-center bg-white shadow-md h-[80px] px-5 dark:bg-black lg:px-24 transition-all duration-300" ref="headerRef">
     <div class="text-3xl font-extrabold text-blue-600 hover:text-blue-700  dark:text-white cursor-pointer">
       <router-link to="/">
         <img :src="isDark ? hopeDark : hopeDef" alt=" defen logo" class="w-[170px] h-[80px] object-cover">
